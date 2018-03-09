@@ -4,13 +4,21 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/rogermolas/RMSpriteButton/blob/master/LICENSE)
 [![Contact](https://img.shields.io/badge/contact-@roger_molas-yellowgreen.svg?style=flat)](https://twitter.com/roger_molas)
 
-
-
-
+RMFloatingAction is a Android like floating action button, support both custom backgoround image and color.
+
 ![Demo](https://github.com/rogermolas/RMFloatingAction/blob/master/Demo.gif)
 
-### Using background image
+## Installation
+
+RMFloatingAction is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "RMFloatingAction"
 ```
+
+### Using background image
+```swift
 let buttons = [
     RMFloatingButton(title: "1", image:  UIImage(named: "closeButton")),
     RMFloatingButton(title: "2", image:  UIImage(named: "closeButton")),
@@ -22,7 +30,7 @@ self.present(floatingVc, animated: true, completion: nil)
 ```
 
 ### Using background color
-```
+```swift
 let buttons = [
     RMFloatingButton(title: "Name: 1", backgroundColor: UIColor.red),
     RMFloatingButton(title: "Name: 2", backgroundColor: UIColor.green),
@@ -32,7 +40,7 @@ floatingVc.delegate = self
 floatingVc.setDirection(button: .down, label: .right)
 self.present(floatingVc, animated: true, completion: nil)
 ```
-Both button and label can use positioning options (  `up`, `down`,` left`, `right`) that defined in public enum `RMFloatingDirection`
+All buttons and labels can use positioning options ( e.g.  `up`, `down`,` left`, `right`) that defined in public enum `RMFloatingDirection`
 
 ## Author
 
