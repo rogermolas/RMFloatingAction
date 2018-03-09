@@ -5,6 +5,8 @@
 [![Contact](https://img.shields.io/badge/contact-@roger_molas-yellowgreen.svg?style=flat)](https://twitter.com/roger_molas)
 
 
+![alt text](https://github.com/rogermolas/RMFloatingAction/blob/master/Demo.gif)
+
 ## Author
 
 rogermolas, contact@rogermolas.com
