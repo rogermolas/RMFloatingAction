@@ -5,7 +5,34 @@
 [![Contact](https://img.shields.io/badge/contact-@roger_molas-yellowgreen.svg?style=flat)](https://twitter.com/roger_molas)
 
 
+
+
 ![Demo](https://github.com/rogermolas/RMFloatingAction/blob/master/Demo.gif)
+
+### Using background image
+```
+let buttons = [
+    RMFloatingButton(title: "1", image:  UIImage(named: "closeButton")),
+    RMFloatingButton(title: "2", image:  UIImage(named: "closeButton")),
+    RMFloatingButton(title: "3", image:  UIImage(named: "closeButton"))]
+let floatingVc = RMFloatingViewController(buttons: buttons, fromView: sender)
+floatingVc.delegate = self
+floatingVc.setDirection(button: .up, label: .left)
+self.present(floatingVc, animated: true, completion: nil)
+```
+
+### Using background color
+```
+let buttons = [
+    RMFloatingButton(title: "Name: 1", backgroundColor: UIColor.red),
+    RMFloatingButton(title: "Name: 2", backgroundColor: UIColor.green),
+    RMFloatingButton(title: "Name: 3", backgroundColor: UIColor.blue)]
+let floatingVc = RMFloatingViewController(buttons: buttons, fromView: sender)
+floatingVc.delegate = self
+floatingVc.setDirection(button: .down, label: .right)
+self.present(floatingVc, animated: true, completion: nil)
+```
+Both button and label can use positioning options (  `up`, `down`,` left`, `right`) that defined in public enum `RMFloatingDirection`
 
 ## Author
 
@@ -15,7 +42,7 @@ rogermolas, contact@rogermolas.com
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Roger Molas
+Copyright (c) 2018 Roger Molas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

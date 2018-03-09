@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func upLeft(_ sender: UIButton) {
         let buttons = [
-            RMFloatingButton(title: "1", image: #imageLiteral(resourceName: "closeButton")),
+            RMFloatingButton(title: "1", image: UIImage(named: "closeButton")),
             RMFloatingButton(title: "2", image: #imageLiteral(resourceName: "closeButton")),
             RMFloatingButton(title: "3", image: #imageLiteral(resourceName: "closeButton"))]
         let floatingVc = RMFloatingViewController(buttons: buttons, fromView: sender)
