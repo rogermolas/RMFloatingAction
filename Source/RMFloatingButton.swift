@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class RMFloatingButton: UIButton {
+open class RMFloatingButton: UIButton {
     private var bgColor: UIColor!
     private var localTitle: String?
-    private var localLabel: UILabel?
+    var textLabel: UILabel?
     
     var index: Int!
-    var title: String? { return localTitle }
+    var title: String? { return localTitle == nil ? "": localTitle}
     
     convenience init(title:String?, backgroundColor: UIColor = UIColor.green) {
         self.init()
@@ -35,11 +35,11 @@ class RMFloatingButton: UIButton {
         setup()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }

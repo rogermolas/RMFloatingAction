@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum RMFloatingDirection {
+public enum RMFloatingDirection {
     case up
     case down
     case left
@@ -28,25 +28,25 @@ enum RMFloatingDirection {
     }
 }
 
-protocol TFloatingViewDelegate: NSObjectProtocol {
+protocol RMFloatingViewDelegate: NSObjectProtocol {
     func didTap(button: RMFloatingButton, At index: Int)
     func didClose(controller: RMFloatingViewController)
 }
 
-class RMFloatingViewController : UIViewController {
+open class RMFloatingViewController : UIViewController {
     var closeButton: RMFloatingButton? = nil
     
-    private let fromView: UIView
+    internal let fromView: UIView
     private let blurredView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-    private var buttonPadding: CGFloat = 70
-    private var buttonDirection = RMFloatingDirection.up
+    internal var buttonPadding: CGFloat = 70
+    internal var buttonDirection = RMFloatingDirection.up
     private var labelDirection = RMFloatingDirection.left
     private var buttonItems = [RMFloatingButton]()
     private var buttonLabels = [UILabel]()
     
-    weak var delegate: TFloatingViewDelegate? = nil
+    weak var delegate: RMFloatingViewDelegate? = nil
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -64,7 +64,7 @@ class RMFloatingViewController : UIViewController {
         self.labelDirection = label
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         blurredView.frame = view.bounds
         view.addSubview(blurredView)
@@ -76,20 +76,24 @@ class RMFloatingViewController : UIViewController {
 
         for button in buttonItems {
             view.addSubview(button)
-            if button.title != nil {
+            if button.title != "" {
                 let label = getLabel(title: button.title!)
                 view.addSubview(label)
                 buttonLabels.append(label)
+            } else {
+                let label = UILabel(frame: CGRect.zero)
+                buttonLabels.append(label)
             }
+            
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animateButtons(visible: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         animateButtons(visible: false)
     }
@@ -139,14 +143,13 @@ class RMFloatingViewController : UIViewController {
                 button.index = index
                 button.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                 button.addTarget(self, action: #selector(didTap(button:)), for: .touchUpInside)
-                if button.title != nil {
-                    let label = buttonLabels[index]
-                    let buttonCenter = buttonDirection.offsetPoint(point: center, offset: buttonPadding * CGFloat(index+1))
-                    let labelSize = labelDirection == .up || labelDirection == .down ? label.bounds.height : label.bounds.width
-                    let labelCenter = labelDirection.offsetPoint(point: buttonCenter, offset: buttonPadding/2 + labelSize)
-                    label.center = labelCenter
-                    label.alpha = 0
-                }
+                
+                let label = buttonLabels[index]
+                let buttonCenter = buttonDirection.offsetPoint(point: center, offset: buttonPadding * CGFloat(index+1))
+                let labelSize = labelDirection == .up || labelDirection == .down ? label.bounds.height : label.bounds.width
+                let labelCenter = labelDirection.offsetPoint(point: buttonCenter, offset: buttonPadding/2 + labelSize)
+                label.center = labelCenter
+                label.alpha = 0
             }
         } else {
             closeButton?.alpha = 1
@@ -157,14 +160,13 @@ class RMFloatingViewController : UIViewController {
                 button.alpha = 1
                 button.transform = CGAffineTransform.identity
                 button.addTarget(self, action: #selector(didTap(button:)), for: .touchUpInside)
-                if button.title != nil {
-                    let label = buttonLabels[index]
-                    let buttonCenter = buttonDirection.offsetPoint(point: center, offset: buttonPadding * CGFloat(index+1))
-                    let labelSize = labelDirection == .up || labelDirection == .down ? label.bounds.height : label.bounds.width
-                    let labelCenter = labelDirection.offsetPoint(point: buttonCenter, offset: buttonPadding/2 + labelSize/2)
-                    label.center = labelCenter
-                    label.alpha = 1
-                }
+                
+                let label = buttonLabels[index]
+                let buttonCenter = buttonDirection.offsetPoint(point: center, offset: buttonPadding * CGFloat(index+1))
+                let labelSize = labelDirection == .up || labelDirection == .down ? label.bounds.height : label.bounds.width
+                let labelCenter = labelDirection.offsetPoint(point: buttonCenter, offset: buttonPadding/2 + labelSize/2)
+                label.center = labelCenter
+                label.alpha = 1
             }
         }
     }
