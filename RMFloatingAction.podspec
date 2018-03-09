@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/rogermolas/RMFloatingAction'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Roger Molas' => 'contact@rogermolas.com' }
-  s.source           = { :git => 'https://github.com/rogermolas/RMFloatingAction', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rogermolas/RMFloatingAction.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/roger_molas'
 
   s.ios.deployment_target = '10.0'
