@@ -12,6 +12,9 @@
 		1D0C27BF20524AC000DF86F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C27BD20524AC000DF86F4 /* Main.storyboard */; };
 		1D0C27C120524AC000DF86F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C27C020524AC000DF86F4 /* Assets.xcassets */; };
 		1D0C27C420524AC000DF86F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C27C220524AC000DF86F4 /* LaunchScreen.storyboard */; };
+		1D0C27CF2052503100DF86F4 /* RMFloatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C27CE2052503100DF86F4 /* RMFloatingViewController.swift */; };
+		1D0C27D12052504100DF86F4 /* RMFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C27D02052504100DF86F4 /* RMFloatingButton.swift */; };
+		1D0C27D32052515300DF86F4 /* RMFloating+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C27D22052515300DF86F4 /* RMFloating+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		1D0C27C020524AC000DF86F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D0C27C320524AC000DF86F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D0C27C520524AC000DF86F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0C27CE2052503100DF86F4 /* RMFloatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMFloatingViewController.swift; sourceTree = "<group>"; };
+		1D0C27D02052504100DF86F4 /* RMFloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFloatingButton.swift; sourceTree = "<group>"; };
+		1D0C27D22052515300DF86F4 /* RMFloating+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMFloating+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		1D0C27AD20524AC000DF86F4 = {
 			isa = PBXGroup;
 			children = (
+				1D0C27CD2052503100DF86F4 /* Source */,
 				1D0C27B820524AC000DF86F4 /* RMFloatingAction */,
 				1D0C27B720524AC000DF86F4 /* Products */,
 			);
@@ -62,6 +69,16 @@
 				1D0C27C520524AC000DF86F4 /* Info.plist */,
 			);
 			path = RMFloatingAction;
+			sourceTree = "<group>";
+		};
+		1D0C27CD2052503100DF86F4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1D0C27CE2052503100DF86F4 /* RMFloatingViewController.swift */,
+				1D0C27D02052504100DF86F4 /* RMFloatingButton.swift */,
+				1D0C27D22052515300DF86F4 /* RMFloating+UIColor.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0C27D12052504100DF86F4 /* RMFloatingButton.swift in Sources */,
+				1D0C27CF2052503100DF86F4 /* RMFloatingViewController.swift in Sources */,
 				1D0C27BC20524AC000DF86F4 /* ViewController.swift in Sources */,
+				1D0C27D32052515300DF86F4 /* RMFloating+UIColor.swift in Sources */,
 				1D0C27BA20524AC000DF86F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
