@@ -4,8 +4,8 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/rogermolas/RMSpriteButton/blob/master/LICENSE)
 [![Contact](https://img.shields.io/badge/contact-@roger_molas-yellowgreen.svg?style=flat)](https://twitter.com/roger_molas)
 
-RMFloatingAction is a Android like floating action button, support both custom backgoround image and color
-
+RMFloatingAction is a Android like floating action button, support both custom backgoround image and color.
+
 ![Demo](https://github.com/rogermolas/RMFloatingAction/blob/master/Demo.gif)
 
 ## Installation
