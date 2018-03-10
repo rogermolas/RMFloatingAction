@@ -33,20 +33,20 @@ open class RMFloatingButton: UIButton {
     var index: Int!
     var title: String? { return localTitle == nil ? "": localTitle}
     
-    convenience init(title:String?, backgroundColor: UIColor = UIColor.green) {
+    public convenience init(title:String?, backgroundColor: UIColor = UIColor.green) {
         self.init()
         self.localTitle = title
         self.bgColor = backgroundColor
         setBackgroundImage(backgroundColor.pixelImage, for: .normal)
     }
     
-    convenience init(title:String?, image: UIImage?) {
+    public convenience init(title:String?, image: UIImage?) {
         self.init()
         self.localTitle = title
         setImage(image, for: .normal)
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         setup()
     }

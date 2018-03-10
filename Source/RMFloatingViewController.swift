@@ -44,7 +44,7 @@ public enum RMFloatingDirection {
     }
 }
 
-protocol RMFloatingViewDelegate: NSObjectProtocol {
+public protocol RMFloatingViewDelegate: NSObjectProtocol {
     func didTap(button: RMFloatingButton, At index: Int)
     func didClose(controller: RMFloatingViewController)
 }
@@ -60,14 +60,14 @@ open class RMFloatingViewController : UIViewController {
     private var buttonItems = [RMFloatingButton]()
     private var buttonLabels = [UILabel]()
     
-    weak var delegate: RMFloatingViewDelegate? = nil
+    public weak var delegate: RMFloatingViewDelegate? = nil
     
     required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: UIViewController
-    init(buttons: [RMFloatingButton], fromView: UIView) {
+    public init(buttons: [RMFloatingButton], fromView: UIView) {
         self.fromView = fromView
         self.buttonItems = buttons
         super.init(nibName: nil, bundle: nil)
