@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/rogermolas/RMFloatingAction.svg?branch=master)](https://travis-ci.org/rogermolas/RMFloatingAction)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/rogermolas/RMSpriteButton/blob/master/LICENSE)
-[![Twitter](https://img.shields.io/badge/Twitter-roger__molas-orange.svg)](https://www.twitter.com/roger_molas)
+[![Twitter](https://img.shields.io/badge/twitter-roger__molas-yellowgreen.svg)](https://www.twitter.com/roger_molas)
 
 RMFloatingAction is a floating action button,  that support both custom backgoround image and color.
 
