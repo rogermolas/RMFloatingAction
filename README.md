@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/rogermolas/RMSpriteButton/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/badge/Twitter-roger__molas-orange.svg)](https://www.twitter.com/roger_molas)
 
-RMFloatingAction is a Android like floating action button, support both custom backgoround image and color.
+RMFloatingAction is a floating action button,  that support both custom backgoround image and color.
 
 ![Demo](https://github.com/rogermolas/RMFloatingAction/blob/master/Demo.gif)
 
@@ -15,6 +15,11 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "RMFloatingAction"
+```
+
+Run the following command in your Terminal
+```bash
+$ pod install
 ```
 
 ### Using background image
