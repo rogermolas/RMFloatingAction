@@ -1,4 +1,13 @@
-language: swift
 osx_image: xcode9.2
-xcode_project: RMFloatingAction.xcodeproj
-xcode_scheme: RMFloatingAction
+language: swift
+
+cache: cocoapods
+podfile: Example/Podfile
+
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod install --project-directory=Example
+
+script:
+- xcodebuild -workspace Example/RMFloatingAction.xcworkspace -scheme RMFloatingAction -sdk iphonesimulator
+- pod lib lint RMFloatingAction.podspec --allow-warnings
