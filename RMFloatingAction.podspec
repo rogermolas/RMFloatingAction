@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RMFloatingAction'
-  s.version          = '0.1.1'
+  s.version          = '1.1'
   s.summary          = '"Android like floating action button."'
 
   s.homepage         = 'https://github.com/rogermolas/RMFloatingAction'
