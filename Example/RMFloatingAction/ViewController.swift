@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RMFloatingAction
 
 class ViewController: UIViewController {
     

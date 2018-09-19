@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RMFloatingAction_Example' do
+  pod 'RMFloatingAction', :path => '../'
+
+  target 'RMFloatingAction_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

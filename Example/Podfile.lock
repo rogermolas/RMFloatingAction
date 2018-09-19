@@ -1,0 +1,16 @@
+PODS:
+  - RMFloatingAction (0.1.0)
+
+DEPENDENCIES:
+  - RMFloatingAction (from `../`)
+
+EXTERNAL SOURCES:
+  RMFloatingAction:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RMFloatingAction: 15f4aedd0c883f080a46e9446a40743cfc59ed70
+
+PODFILE CHECKSUM: 9a61d9262f8bc6317b76a1411c8c6ac6cbfa568a
+
+COCOAPODS: 1.5.3
